@@ -27,3 +27,15 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+class Message(models.Model):
+    email = models.EmailField()
+    name = models.CharField(max_length=200)
+    subject = models.CharField(max_length=300)
+    message = models.TextField()
+    created_date = models.DateTimeField(default=timezone.now)
+    def send(self):
+        self.save()
+    def __str__(self):
+
+        return self.subject

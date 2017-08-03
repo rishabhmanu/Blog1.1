@@ -24,13 +24,14 @@ def contact(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
-            try:
-                send_mail(name, message, from_email, ['admin@example.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
+            # name = form.cleaned_data['name']
+            # from_email = form.cleaned_data['from_email']
+            # message = form.cleaned_data['message']
+            # try:
+                # send_mail(name, message, from_email, ['admin@example.com'])
+            form.save()
+            # except BadHeaderError:
+                # return HttpResponse('Invalid header found.')
             return redirect('success')
     return render(request, "blog/contact.html", {'form': form})
 
