@@ -8,30 +8,27 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="page-heading">
-                    <h1>About Me</h1>
+                    <h1>You probably want to look at my work.</h1>
                     <hr class="small">
-                    <span class="subheading">This is what I do.</span>
+                    <span class="subheading">That's cool, but sit tight let's break the ice a little.</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
-
 <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <p>I'm a Computer Science and Engineering undergrad from India, currently studying at National Institute Of Engineering, Mysuru. I am also an active student member and volunteer of IEEE and IEEE Computer Society.</p>
+              <p>My core interests and passion lie in the field of Computer Science. I like to explore new technologies and make real world projects which deals with societal and technical problems. I am in love with Python and Data Science. In my free time I also work on Web developments.</p>
+              <p>My blog is for all of them who love to explore new possiblities in the field of Science and technology. I will be writing about my experiences on working with different technologies, challenges I faced and the solutions I found. </p>
+              <p>I will love to hear from you all. If you would like to connect with me, then be sure to find me on Twitter, Facebook and LinkedIn.
+              <p>You can find my work samples on Github. Links of all my social accounts are below.</p>
+              <p>Stay tuned! </p>
+          </div>
+      </div>
+  </div>
 
-{% for post in posts %}
-    <div class="post">
-        <div class="date">
-            <p>published: {{ post.published_date }}</p>
-        </div>
-        <h1><a href="#">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
-</div>
-</div>
-</div>
+
 {% endblock %}
